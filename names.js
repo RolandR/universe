@@ -50,6 +50,25 @@ function generateGermanName(){
 	return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
+function generateChineseName(){
+	var name = "";
+	var words = Math.ceil(Math.random()*2);
+	for(var i = 0; i < words; i++){
+		var length = Math.ceil(Math.random()*2);
+		var word = "";
+		for(var w = 0; w < length; w++){
+			var nextSyllable = selectRandomly(chinese);
+			if(vowels.includes(word.charAt(word.length-1)) && vowels.includes(nextSyllable.charAt(0))){
+				word += "'";
+			}
+			word += nextSyllable;
+		}
+		word = word.charAt(0).toUpperCase() + word.slice(1);
+		name += word + " ";
+	}
+	return name.trim();
+}
+
 var catalogs = [];
 
 function generateCatalogs(){
@@ -231,6 +250,7 @@ var typeProbabilities = [
 	,3 // German
 	,3 // Animal
 	,1 // Color
+	,7 // Chinese
 ]
 
 var typeProbabilitiesSum = 0;
@@ -269,14 +289,33 @@ function generateName(){
 		// Color
 		return generateColorName();
 		
-	} 
+	} else if(type < typeProbabilities[5]){
+		// Chinese
+		return generateChineseName();
+		
+	}
 	
 }
 
-/*var names = "";
 
-for(var i = 0; i < 30; i++){
-	names += generateName() + "\n";
-}
 
-console.log(names);*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
