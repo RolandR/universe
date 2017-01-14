@@ -3,7 +3,9 @@ init();
 
 function init(){
 
-	var hoverPointer = document.getElementById("hoverPointer");
+	noise.seed(Math.random());
+
+	/*var hoverPointer = document.getElementById("hoverPointer");
 	var hoverPointerCtx = hoverPointer.getContext("2d");
 
 	hoverPointerCtx.clearRect(0, 0, uiCanvas.width, uiCanvas.height);
@@ -14,7 +16,7 @@ function init(){
 	hoverPointerCtx.strokeStyle = "#994422";
 	hoverPointerCtx.lineWidth = 1;
 	
-	hoverPointerCtx.stroke();
+	hoverPointerCtx.stroke();*/
 
 	
 

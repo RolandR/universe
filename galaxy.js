@@ -69,7 +69,7 @@ for(var i in stars){
 	context.fill();
 }
 
-window.addEventListener("mousemove", function(e){
+/*window.addEventListener("mousemove", function(e){
 	var chunkX = ~~(10*(e.clientX*scale)/canvas.width);
 	var chunkY = ~~(10*(e.clientY*scale)/canvas.height);
 	if(chunks[chunkX]){
@@ -85,7 +85,7 @@ window.addEventListener("mousemove", function(e){
 		}
 	}
 }, false);
-
+*/
 
 
 
