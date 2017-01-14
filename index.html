@@ -46,10 +46,17 @@
 				position: absolute;
 				z-index: 1000;
 			}
+			#planetCanvas{
+				position: absolute;
+				z-index: 500;
+			}
 		</style>
 	</head>
 	<body>
 		<canvas id="uiCanvas">
+
+		</canvas>
+		<canvas id="planetCanvas">
 
 		</canvas>
 		<canvas id="canvas">
@@ -57,12 +64,13 @@
 		</canvas>
 		<div id="hoverDetails">Mouse over stars!</div>
 	</body>
-	<!--script type="text/javascript" src="./perlin.js"></script-->
+	<script type="text/javascript" src="./perlin.js"></script>
 
 	<!--script type="text/javascript" src="./main.js"></script-->
 	<script type="text/javascript" src="./aux.js"></script>
 	<script type="text/javascript" src="./nameFragments.js"></script>
 	<script type="text/javascript" src="./names.js"></script>
 	<script type="text/javascript" src="./galaxy.js"></script>
+	<script type="text/javascript" src="./planet.js"></script>
 </html>
 
