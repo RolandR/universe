@@ -3,9 +3,24 @@ init();
 
 function init(){
 
+	var hoverPointer = document.getElementById("hoverPointer");
+	var hoverPointerCtx = hoverPointer.getContext("2d");
+
+	hoverPointerCtx.clearRect(0, 0, uiCanvas.width, uiCanvas.height);
+	hoverPointerCtx.beginPath();
+	hoverPointerCtx.moveTo(0, 0);
+	hoverPointerCtx.lineTo(21, 21);
+	
+	hoverPointerCtx.strokeStyle = "#994422";
+	hoverPointerCtx.lineWidth = 1;
+	
+	hoverPointerCtx.stroke();
+
+	
+
 	//noise.seed(Math.random());
 
-	var canvas = document.getElementById("canvas");
+	/*var canvas = document.getElementById("canvas");
 	var context = canvas.getContext("2d");
 
 	var width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -14,7 +29,7 @@ function init(){
 	var scale = 1/3;
 
 	canvas.width = width*scale;
-	canvas.height = height*scale;
+	canvas.height = height*scale;*/
 
 	
 

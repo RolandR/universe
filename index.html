@@ -17,6 +17,7 @@
 				height: 100%;
 				overflow: hidden;
 				font-family: monospace;
+				cursor: none;
 			}
 			body{
 				background-color: #000000;
@@ -27,20 +28,34 @@
 				image-rendering: -moz-crisp-edges;
 				position: absolute;
 			}
-			#hoverDetails{
-				height: 40px;
-				max-height: 300px;
-				width: 150px;
-				padding: 4px;
-				border: 3px #994422 solid;
-				background-color: rgba(255, 255, 255, 0.1);
-				color: #FFFFFF;
+			#hoverContainer{
 				position: absolute;
 				top: 0px;
-				bottom: 0px;
-				font-size: 20px;
+				left: 0px;
 				z-index: 2000;
 				text-align: center;
+				transition: top left;
+				transition-duration: 100ms;
+			}
+			#hoverDetails{
+				font-size: 20px;
+				position: absolute;
+				height: 40px;
+				max-height: 300px;
+				width: 250px;
+				padding: 4px;
+				border: 1px #994422 solid;
+				background-color: rgba(20, 20, 20, 0.9);
+				color: #FFFFFF;
+				top: 20px;
+				left: 20px;
+			}
+			#hoverPointer{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				height: 40px;
+				width: 40px;
 			}
 			#uiCanvas{
 				position: absolute;
@@ -62,11 +77,16 @@
 		<canvas id="canvas">
 
 		</canvas>
-		<div id="hoverDetails">Mouse over stars!</div>
+		<div id="hoverContainer">
+			<canvas id="hoverPointer" height="40" width="40"></canvas>
+			<div id="hoverDetails">
+				Mouse over stars!
+			</div>
+		</div>
 	</body>
 	<script type="text/javascript" src="./perlin.js"></script>
 
-	<!--script type="text/javascript" src="./main.js"></script-->
+	<script type="text/javascript" src="./main.js"></script>
 	<script type="text/javascript" src="./aux.js"></script>
 	<script type="text/javascript" src="./nameFragments.js"></script>
 	<script type="text/javascript" src="./names.js"></script>
